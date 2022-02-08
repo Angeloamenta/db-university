@@ -4,7 +4,7 @@ query group
 3. Calcolare la media dei voti di ogni appello d'esame
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
-query select
+\\Query Select\\
 
 1. Selezionare tutti gli studenti nati nel 1990 (160)
 SELECT * FROM `students` WHERE YEAR(`date_of_birth`)= 1990 
@@ -28,4 +28,7 @@ SELECT * FROM `exams` WHERE `date` = '2020/06/20' AND `hour` > '14:00:00'
 SELECT * FROM `degrees` WHERE `level` = 'magistrale' 
 
 7. Da quanti dipartimenti è composta l'università? (12)
+SELECT COUNT(id) as 'dipartimenti' FROM `departments` 
+
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+SELECT * FROM `teachers` WHERE `phone`IS NULL 
